@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<!-- 默认值是false，开发时候打开，可以看到较为详尽的错误信息，系统上线时最好关掉 -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+    <package name="ognl" extends="struts-default" namespace="/">
+        <action name="ognl" class="com.hx.ognl.action.OgnlTestAction">
+            <result>/loginSuccess.jsp</result>
+        </action>
+        <action name="test" class="com.hx.ognl.action.OgnlAction">
+        	<result>/ognl.jsp</result>
+        </action>
+    </package>
+</struts>
