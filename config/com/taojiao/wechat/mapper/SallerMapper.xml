@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taojiao.wechat.mapper.SallerMapper" >
+  <resultMap id="BaseResultMap" type="com.taojiao.wechat.domain.Saller" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="factory_name" property="factoryName" jdbcType="VARCHAR" />
+    <result column="saller_name" property="sallerName" jdbcType="VARCHAR" />
+    <result column="saller_wechat" property="sallerWechat" jdbcType="VARCHAR" />
+    <result column="saller_pic" property="sallerPic" jdbcType="VARCHAR" />
+    <result column="saller_tell" property="sallerTell" jdbcType="VARCHAR" />
+    <result column="saller_phone" property="sallerPhone" jdbcType="VARCHAR" />
+    <result column="service_wechat" property="serviceWechat" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="bus_license" property="busLicense" jdbcType="VARCHAR" />
+    <result column="edu_license" property="eduLicense" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="role" property="role" jdbcType="INTEGER" />
+    <result column="create_by" property="createBy" jdbcType="TIMESTAMP" />
+  </resultMap>
+  	<select id="get" resultMap="BaseResultMap" parameterType="String">
+		select * from saller_b where id=#{id}
+	</select>
+  </mapper>
